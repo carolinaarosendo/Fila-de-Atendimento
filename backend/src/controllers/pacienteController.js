@@ -10,7 +10,9 @@ export async function cadastrar(req, res) {
   const erro = validarPaciente(req.body)
   if (erro) return res.status(400).json({ erro })
 
-  const paciente = await PacienteModel.criar(req.body)
+  const { nome, genero, idade, cpf_rg, prioridade, queixa_principal, observacoes } = req.body
+
+  const paciente = await PacienteModel.criar({ nome, genero, idade, cpf_rg, prioridade, queixa_principal, observacoes })
   res.status(201).json(paciente)
 }
 
