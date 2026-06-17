@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { listar, cadastrar, atualizarStatus, remover } from './controllers/PacienteController.js'
+import { listar, cadastrar, atualizarStatus, remover } from './controllers/pacienteController.js'
 
 const router = Router()
 

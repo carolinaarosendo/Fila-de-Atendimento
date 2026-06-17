@@ -1,5 +1,5 @@
-import { PacienteModel } from '../models/PacienteModel.js'
-import { validarPaciente, validarStatus } from '../validators/PacienteValidator.js'
+import { PacienteModel } from '../models/pacienteModel.js'
+import { validarPaciente, validarStatus } from '../validators/pacienteValidator.js'
 
 export async function listar(req, res) {
   const pacientes = await PacienteModel.listarTodos()
